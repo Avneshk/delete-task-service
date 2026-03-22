@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: todo-delete
 spec:
+  replicas: 3
   selector:
     matchLabels:
       app: todo-delete
