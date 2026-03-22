@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: todo-Delete
+spec:
+  selector:
+    matchLabels:
+      app: todo-Delete
+  template:
+    metadata:
+      labels:
+        app: todo-Delete
+    spec:
+      containers:
+      - name: todo-Delete
+        image: acrrg3.azurecr.io/todo-delete-tasks-api:v1
+        ports:
+        - containerPort: 80
